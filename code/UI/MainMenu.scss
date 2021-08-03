@@ -1,0 +1,32 @@
+﻿.menu {
+    position: absolute;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    left: 128px;
+
+    .banner {
+        left: 32px;
+        width: 256px;
+        height: 128px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    button {
+        color: white;
+        font-size: 16px;
+        padding-top: 16px;
+        font-weight: 600;
+
+        &:hover {
+            sound-in: MainMenu.Hover;
+            color: #fffedb;
+
+            &:active {
+                color: #fffecb;
+                sound-out: MainMenu.Click;
+            }
+        }
+    }
+}

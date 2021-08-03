@@ -1,0 +1,109 @@
+﻿@import "/ui/Window.scss";
+
+ServerBrowser {
+    flex-direction: column;
+    flex-grow: 1;
+
+    .servers {
+        flex-grow: 1;
+        flex-direction: column;
+        width: 100%;
+
+        .table-header, .list ServerEntry {
+            min-height: 24px;
+            max-height: 24px;
+
+            :nth-child(1) {
+                min-width: 24px;
+                max-width: 24px;
+            }
+
+            :nth-child(2) {
+                min-width: 150px;
+                max-width: 150px;
+            }
+
+            :nth-child(3) {
+                min-width: 50px;
+                max-width: 50px;
+            }
+
+            :nth-child(4), :nth-child(5) {
+                min-width: 200px;
+                max-width: 200px;
+            }
+        }
+
+        .table-header {
+            width: 100%;
+            background-color: $button;
+
+            text {
+                border: $button-border;
+                font-size: 12px;
+                padding: 4px;
+                color: $background-dark;
+            }
+        }
+
+        .listcontainer {
+            background-color: red;
+            width: 100%;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        .list {
+            width: 100%;
+            flex-direction: column;
+            overflow: scroll;
+            background-color: $background-dark;
+
+            .active {
+                background-color: $selected;
+            }
+
+            ServerEntry {
+                min-height: 24px;
+
+                Label {
+                    padding: 4px;
+                }
+            }
+        }
+    }
+}
+
+.categories {
+    max-height: 26px;
+    min-height: 26px;
+
+    button:not(.active) {
+        margin-top: 2px;
+    }
+}
+
+.buttons {
+    flex-direction: row-reverse;
+}
+
+.box {
+    background-color: $background;
+    padding: 5px;
+    flex-direction: column;
+    max-height: 100px;
+    min-height: 100px;
+
+    .tab {
+        align-items: center;
+        margin: 2px;
+
+        :nth-child(1) {
+            width: 100px;
+        }
+
+        :nth-child(2) {
+            width: 300px;
+        }
+    }
+}
